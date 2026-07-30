@@ -8,5 +8,5 @@
 ## Entry 2:Setup Retrofit + API interface
 **Ask:** minta AI bikinin Retrofit service interface buat TVMaze API
 **Got:** interface dengan endpoint /shows dan /shows/{id}, plus data class Show
-**What I did:** dipake tapi aku ubah nama field `rating` jadi nested data class karena AI awalnya bikin `rating: Double` padahal di response aslinya rating itu object `{average: Double?}`
-**AI got wrong:** AI ngasumsiin rating.average selalu non null, padahal di API banyak show yang ratingnya null, dicek langsung ke response API baru sadarharus di-nullable-in
+**What I did:** dipake tapi saya mengubah nama field `rating` jadi nested data class karena AI awalnya membuat `rating: Double` padahal di response aslinya rating itu object `{average: Double?}`
+**AI got wrong:** AI mengasumsikan rating.average selalu non null, padahal di API banyak menunjukkan yang ratingnya null, kemudian ditinjau langsung ke response API, akhirnya harus di nullable kan
