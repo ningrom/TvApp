@@ -1,8 +1,13 @@
 package com.ayuk.tvapp.ui.component
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.material3.Card
+import androidx.tv.material3.Card
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -24,11 +29,25 @@ fun MovieCard(
             .widthIn(max = 220.dp)
             .aspectRatio(2f / 3f)
     ) {
+        Column {
+            AsyncImage(
+                model = show.image?.medium,
+                contentDescription = show.name,
+                modifier = Modifier.fillMaxWidth() //agar tinggi gbr dpt sesuai
+                    .aspectRatio(2f / 3f),
+                contentScale = ContentScale.Crop
+            )
 
-        AsyncImage(
-            model = show.imageUrl?.length,
-            contentDescription = show.name,
-            contentScale = ContentScale.Crop
-        )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            Text(
+                text = show.name,
+                maxLines = 1
+            )
+
+            Text(
+                text = "⭐ ${show.rating?.average ?: "N/A"}"
+            )
+        }
     }
 }
