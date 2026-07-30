@@ -1,9 +1,11 @@
 package com.ayuk.tvapp.data.model
 
 data class Tvshow(
-//    @SeriizedName("id")
-    var name: String,
-    var id: Int,
-    var image: Image?,
-    var rating: Rating?
+
+    val id: Int,
+    val name: String,
+    val image: Image?,
+    val rating: Rating?,
+    val summary: String?,
+    val premiered: String?
 )

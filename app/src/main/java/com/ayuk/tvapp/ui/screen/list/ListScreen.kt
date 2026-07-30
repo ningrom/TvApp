@@ -50,6 +50,7 @@ fun ListScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Text("Failed to load")
+
                 }
             }
 
@@ -62,7 +63,7 @@ fun ListScreen(
                     columns = GridCells.Fixed(5),
                     horizontalArrangement = Arrangement.spacedBy(16.dp),
                     verticalArrangement = Arrangement.spacedBy(20.dp),
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.weight(1f),
                     contentPadding = PaddingValues(24.dp)
                 ) {
 
