@@ -1,13 +1,18 @@
 [versions]
 agp = "9.2.1"
+coilCompose = "2.7.0"
+converterGson = "3.0.0"
 coreKtx = "1.19.0"
-appcompat = "1.6.1"
-kotlin = "2.2.10"
-composeBom = "2024.09.00"
-tvFoundation = "1.0.0-alpha07"
-tvMaterial = "1.0.0-alpha07"
-lifecycleRuntimeKtx = "2.6.1"
-activityCompose = "1.8.0"
+appcompat = "1.7.1"
+kotlin = "2.4.10"
+composeBom = "2026.06.01"
+loggingInterceptor = "5.4.0"
+retrofit = "3.0.0"
+tvFoundation = "1.0.0"
+tvMaterial = "1.1.0"
+lifecycleRuntimeKtx = "2.11.0"
+activityCompose = "1.13.0"
+material3 = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -23,8 +28,14 @@ androidx-tv-foundation = { group = "androidx.tv", name = "tv-foundation", versio
 androidx-tv-material = { group = "androidx.tv", name = "tv-material", version.ref = "tvMaterial" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
